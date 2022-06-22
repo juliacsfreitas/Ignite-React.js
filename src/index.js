@@ -1,3 +1,2 @@
-import react from "react";
-import { app } from "./app"
-
+import React from "react";
+import { app } from "./app";
