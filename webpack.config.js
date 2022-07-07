@@ -1,9 +1,11 @@
 const path = require("path") 
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
+const isDevelopment = process.env.Node_Env !== 'production';
+
 module.exports = {
-    mode: 'development',
-    devtool: "eval-source-map",
+    mode: isDevelopment ? 'development' : 'production',
+    devtool: isDevelopment ?  'eval-source-map' : 'source-map',
     entry: path.resolve(__dirname, "src", "index.js"),
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -19,7 +21,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "public", "index.html")
+            template: path.resolve(__dirname, 'public', "index.html")
         })
     ],
 
@@ -28,7 +30,12 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: "babel-loader",
+                use: 'babel-loader',
+            },
+            {  test: /\.css$/,
+            exclude: /node_modules/,
+            use: ['style-loader', 'css-loader'],
+
             }
         ],
     }
