@@ -1,5 +1,7 @@
-import './styles/global.css';
+import { RepositoryList } from './Styles/Componentes/Repositorylist';
+
+import './styles/global.scss';
 
 export function App() {
-    return <h1>Hello Word</h1>
+    return <RepositoryList/>
 }
