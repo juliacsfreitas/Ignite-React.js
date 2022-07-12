@@ -1,15 +1,12 @@
-
-import { Counter } from './Styles/Componentes/Counter';
-import { RepositoryList } from './Styles/Componentes/Repositorylist';
+import { RepositoryList } from './Components/RepositoryList';
 
 import './styles/global.scss';
 
 export function App() {
     return(
-        <>
+    
         <RepositoryList/>
-        <Counter/>
-        </>
-    );
+      
+    )
  
 }
