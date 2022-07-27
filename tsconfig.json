@@ -4,10 +4,20 @@
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "allowSyntheticDefaultImports" : true
-  }
+    "allowSyntheticDefaultImports" : true,
+
+    "lib": ["dom", "DOM.Iterable", "ESNext"],
+    "noEmit": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+ }
 }
