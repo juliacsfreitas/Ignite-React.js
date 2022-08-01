@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RepositoryItem } from "./RepositoryItem"
+import { RepositoryItem } from "./RepositoryItem";
 
 import '../Styles/repositories.scss';
 
